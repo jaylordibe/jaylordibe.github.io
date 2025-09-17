@@ -780,12 +780,54 @@ section {
 .skill-item i {
     font-size: var(--font-size-2xl);
     margin-bottom: var(--spacing-sm);
-    color: var(--primary-color);
     transition: var(--transition-normal);
 }
 
+/* Programming Languages - Java, PHP, JavaScript, Node.js, Python, C/C++, Bash */
+.skill-category:nth-child(1) .skill-item:nth-child(1) i { color: #ed8b00; } /* Java */
+.skill-category:nth-child(1) .skill-item:nth-child(2) i { color: #777bb4; } /* PHP */
+.skill-category:nth-child(1) .skill-item:nth-child(3) i { color: #f7df1e; } /* JavaScript */
+.skill-category:nth-child(1) .skill-item:nth-child(4) i { color: #339933; } /* Node.js */
+.skill-category:nth-child(1) .skill-item:nth-child(5) i { color: #3776ab; } /* Python */
+.skill-category:nth-child(1) .skill-item:nth-child(6) i { color: #00599c; } /* C/C++ */
+.skill-category:nth-child(1) .skill-item:nth-child(7) i { color: #4eaa25; } /* Bash */
+
+/* Frameworks & Libraries - Spring Boot, Play Framework, Hibernate, Laravel, CodeIgniter, Express.js, NestJS, Angular, React.js, Vue.js, Next.js */
+.skill-category:nth-child(2) .skill-item:nth-child(1) i { color: #6db33f; } /* Spring Boot */
+.skill-category:nth-child(2) .skill-item:nth-child(2) i { color: #2e2e2e; } /* Play Framework */
+.skill-category:nth-child(2) .skill-item:nth-child(3) i { color: #59666c; } /* Hibernate */
+.skill-category:nth-child(2) .skill-item:nth-child(4) i { color: #ff2d20; } /* Laravel */
+.skill-category:nth-child(2) .skill-item:nth-child(5) i { color: #ee4323; } /* CodeIgniter */
+.skill-category:nth-child(2) .skill-item:nth-child(6) i { color: #000000; } /* Express.js */
+.skill-category:nth-child(2) .skill-item:nth-child(7) i { color: #e0234e; } /* NestJS */
+.skill-category:nth-child(2) .skill-item:nth-child(8) i { color: #dd0031; } /* Angular */
+.skill-category:nth-child(2) .skill-item:nth-child(9) i { color: #61dafb; } /* React.js */
+.skill-category:nth-child(2) .skill-item:nth-child(10) i { color: #4fc08d; } /* Vue.js */
+.skill-category:nth-child(2) .skill-item:nth-child(11) i { color: #000000; } /* Next.js */
+
+/* Databases - MySQL, PostgreSQL, MongoDB, Elasticsearch, Redis, Memcache */
+.skill-category:nth-child(3) .skill-item:nth-child(1) i { color: #4479a1; } /* MySQL */
+.skill-category:nth-child(3) .skill-item:nth-child(2) i { color: #336791; } /* PostgreSQL */
+.skill-category:nth-child(3) .skill-item:nth-child(3) i { color: #47a248; } /* MongoDB */
+.skill-category:nth-child(3) .skill-item:nth-child(4) i { color: #005571; } /* Elasticsearch */
+.skill-category:nth-child(3) .skill-item:nth-child(5) i { color: #dc382d; } /* Redis */
+.skill-category:nth-child(3) .skill-item:nth-child(6) i { color: #0077b5; } /* Memcache */
+
+/* DevOps & Cloud - Linux Server, AWS, Google Cloud, Azure, Docker, Jenkins, Infrastructure as Code, GitHub Actions, Bitbucket Pipelines, GitLab CI/CD, Travis CI */
+.skill-category:nth-child(4) .skill-item:nth-child(1) i { color: #fcc624; } /* Linux Server */
+.skill-category:nth-child(4) .skill-item:nth-child(2) i { color: #ff9900; } /* AWS */
+.skill-category:nth-child(4) .skill-item:nth-child(3) i { color: #4285f4; } /* Google Cloud */
+.skill-category:nth-child(4) .skill-item:nth-child(4) i { color: #0078d4; } /* Azure */
+.skill-category:nth-child(4) .skill-item:nth-child(5) i { color: #2496ed; } /* Docker */
+.skill-category:nth-child(4) .skill-item:nth-child(6) i { color: #d24939; } /* Jenkins */
+.skill-category:nth-child(4) .skill-item:nth-child(7) i { color: #00d4ff; } /* Infrastructure as Code */
+.skill-category:nth-child(4) .skill-item:nth-child(8) i { color: #181717; } /* GitHub Actions */
+.skill-category:nth-child(4) .skill-item:nth-child(9) i { color: #0052cc; } /* Bitbucket Pipelines */
+.skill-category:nth-child(4) .skill-item:nth-child(10) i { color: #fc6d26; } /* GitLab CI/CD */
+.skill-category:nth-child(4) .skill-item:nth-child(11) i { color: #3eaaaf; } /* Travis CI */
+
 .skill-item:hover i {
-    color: white;
+    transform: scale(1.2);
 }
 
 .skill-item span {
