@@ -68,14 +68,14 @@ function updateNavbar() {
         navbar.classList.remove('scrolled');
     }
     
-    // Hide/show navbar on scroll
-    if (scrollTop > lastScrollTop && scrollTop > 100) {
-        // Scrolling down
-        navbar.classList.add('hidden');
-    } else {
-        // Scrolling up
-        navbar.classList.remove('hidden');
-    }
+    // Keep navbar always visible (disabled auto-hide)
+    // if (scrollTop > lastScrollTop && scrollTop > 100) {
+    //     // Scrolling down
+    //     navbar.classList.add('hidden');
+    // } else {
+    //     // Scrolling up
+    //     navbar.classList.remove('hidden');
+    // }
     
     lastScrollTop = scrollTop;
     ticking = false;
@@ -403,13 +403,13 @@ function debounce(func, wait) {
 
 // Apply debouncing to scroll events
 const debouncedScrollHandler = debounce(() => {
-    // Navbar background change
+    // Navbar background change (dark theme)
     if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        navbar.style.background = '#0f172a';
+        navbar.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4)';
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+        navbar.style.background = '#0f172a';
+        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
     }
     
     // Active navigation link highlighting
