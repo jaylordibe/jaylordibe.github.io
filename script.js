@@ -5,10 +5,28 @@ const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
 const navbar = document.querySelector('.navbar');
 
-// Mobile Navigation Toggle
+// Mobile Navigation Toggle with animations
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    
+    // Prevent body scroll when menu is open
+    if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Animate nav links on mobile menu open
+navMenu.addEventListener('transitionend', () => {
+    if (navMenu.classList.contains('active')) {
+        const navLinks = navMenu.querySelectorAll('.nav-link');
+        navLinks.forEach((link, index) => {
+            link.style.animationDelay = `${index * 0.1}s`;
+            link.classList.add('animate-in');
+        });
+    }
 });
 
 // Close mobile menu when clicking on a link
@@ -36,16 +54,41 @@ navLinks.forEach(link => {
     });
 });
 
-// Navbar background change on scroll
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+// Navbar scroll effects
+let lastScrollTop = 0;
+let ticking = false;
+
+function updateNavbar() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Add scrolled class for styling
+    if (scrollTop > 50) {
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+        navbar.classList.remove('scrolled');
     }
-});
+    
+    // Hide/show navbar on scroll
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+        // Scrolling down
+        navbar.classList.add('hidden');
+    } else {
+        // Scrolling up
+        navbar.classList.remove('hidden');
+    }
+    
+    lastScrollTop = scrollTop;
+    ticking = false;
+}
+
+function requestTick() {
+    if (!ticking) {
+        requestAnimationFrame(updateNavbar);
+        ticking = true;
+    }
+}
+
+window.addEventListener('scroll', requestTick);
 
 // Active navigation link highlighting
 window.addEventListener('scroll', () => {
