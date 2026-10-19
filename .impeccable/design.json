@@ -1,0 +1,711 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T04:09:00Z",
+  "title": "Design System: Jay Lord Ibe · Departures",
+  "extensions": {
+    "colorMeta": {
+      "concourse": {
+        "role": "neutral",
+        "displayName": "Concourse",
+        "canonical": "oklch(96.6% 0.004 122)",
+        "tonalRamp": [
+          "oklch(15% 0.004 122)",
+          "oklch(26% 0.004 122)",
+          "oklch(38% 0.004 122)",
+          "oklch(49% 0.004 122)",
+          "oklch(61% 0.004 122)",
+          "oklch(72% 0.004 122)",
+          "oklch(84% 0.004 122)",
+          "oklch(95% 0.004 122)"
+        ]
+      },
+      "panel": {
+        "role": "neutral",
+        "displayName": "Panel White",
+        "canonical": "oklch(100.0% 0.000 90)",
+        "tonalRamp": [
+          "oklch(15% 0.000 90)",
+          "oklch(26% 0.000 90)",
+          "oklch(38% 0.000 90)",
+          "oklch(49% 0.000 90)",
+          "oklch(61% 0.000 90)",
+          "oklch(72% 0.000 90)",
+          "oklch(84% 0.000 90)",
+          "oklch(95% 0.000 90)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(18.2% 0.000 90)",
+        "tonalRamp": [
+          "oklch(15% 0.000 90)",
+          "oklch(26% 0.000 90)",
+          "oklch(38% 0.000 90)",
+          "oklch(49% 0.000 90)",
+          "oklch(61% 0.000 90)",
+          "oklch(72% 0.000 90)",
+          "oklch(84% 0.000 90)",
+          "oklch(95% 0.000 90)"
+        ]
+      },
+      "ink-2": {
+        "role": "neutral",
+        "displayName": "Ink 2",
+        "canonical": "oklch(40.8% 0.011 258)",
+        "tonalRamp": [
+          "oklch(15% 0.011 258)",
+          "oklch(26% 0.011 258)",
+          "oklch(38% 0.011 258)",
+          "oklch(49% 0.011 258)",
+          "oklch(61% 0.011 258)",
+          "oklch(72% 0.011 258)",
+          "oklch(84% 0.011 258)",
+          "oklch(95% 0.011 258)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule Ink",
+        "canonical": "oklch(18.2% 0.000 90)",
+        "tonalRamp": [
+          "oklch(15% 0.000 90)",
+          "oklch(26% 0.000 90)",
+          "oklch(38% 0.000 90)",
+          "oklch(49% 0.000 90)",
+          "oklch(61% 0.000 90)",
+          "oklch(72% 0.000 90)",
+          "oklch(84% 0.000 90)",
+          "oklch(95% 0.000 90)"
+        ],
+        "aliasOf": "ink"
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "oklch(87.2% 0.009 129)",
+        "tonalRamp": [
+          "oklch(15% 0.009 129)",
+          "oklch(26% 0.009 129)",
+          "oklch(38% 0.009 129)",
+          "oklch(49% 0.009 129)",
+          "oklch(61% 0.009 129)",
+          "oklch(72% 0.009 129)",
+          "oklch(84% 0.009 129)",
+          "oklch(95% 0.009 129)"
+        ]
+      },
+      "yellow": {
+        "role": "primary",
+        "displayName": "Signal Yellow",
+        "canonical": "oklch(86.0% 0.172 89)",
+        "tonalRamp": [
+          "oklch(15% 0.062 89)",
+          "oklch(26% 0.108 89)",
+          "oklch(38% 0.153 89)",
+          "oklch(49% 0.172 89)",
+          "oklch(61% 0.159 89)",
+          "oklch(72% 0.113 89)",
+          "oklch(84% 0.068 89)",
+          "oklch(95% 0.022 89)"
+        ]
+      },
+      "yellow-ink-2": {
+        "role": "primary",
+        "displayName": "Yellow Field Ink",
+        "canonical": "oklch(39.6% 0.081 91)",
+        "tonalRamp": [
+          "oklch(15% 0.062 91)",
+          "oklch(26% 0.081 91)",
+          "oklch(38% 0.081 91)",
+          "oklch(49% 0.081 91)",
+          "oklch(61% 0.081 91)",
+          "oklch(72% 0.081 91)",
+          "oklch(84% 0.068 91)",
+          "oklch(95% 0.022 91)"
+        ]
+      },
+      "blue": {
+        "role": "secondary",
+        "displayName": "Platform Blue",
+        "canonical": "oklch(38.6% 0.148 261)",
+        "tonalRamp": [
+          "oklch(15% 0.062 261)",
+          "oklch(26% 0.108 261)",
+          "oklch(38% 0.148 261)",
+          "oklch(49% 0.148 261)",
+          "oklch(61% 0.148 261)",
+          "oklch(72% 0.113 261)",
+          "oklch(84% 0.068 261)",
+          "oklch(95% 0.022 261)"
+        ]
+      },
+      "blue-deep": {
+        "role": "secondary",
+        "displayName": "Deep Platform Blue",
+        "canonical": "oklch(31.5% 0.116 260)",
+        "tonalRamp": [
+          "oklch(15% 0.062 260)",
+          "oklch(26% 0.108 260)",
+          "oklch(38% 0.116 260)",
+          "oklch(49% 0.116 260)",
+          "oklch(61% 0.116 260)",
+          "oklch(72% 0.113 260)",
+          "oklch(84% 0.068 260)",
+          "oklch(95% 0.022 260)"
+        ]
+      },
+      "blue-ink": {
+        "role": "secondary",
+        "displayName": "Blue Field Ink",
+        "canonical": "oklch(96.6% 0.004 122)",
+        "tonalRamp": [
+          "oklch(15% 0.004 122)",
+          "oklch(26% 0.004 122)",
+          "oklch(38% 0.004 122)",
+          "oklch(49% 0.004 122)",
+          "oklch(61% 0.004 122)",
+          "oklch(72% 0.004 122)",
+          "oklch(84% 0.004 122)",
+          "oklch(95% 0.004 122)"
+        ],
+        "aliasOf": "concourse"
+      },
+      "blue-ink-2": {
+        "role": "secondary",
+        "displayName": "Blue Field Ink 2",
+        "canonical": "oklch(83.8% 0.045 266)",
+        "tonalRamp": [
+          "oklch(15% 0.045 266)",
+          "oklch(26% 0.045 266)",
+          "oklch(38% 0.045 266)",
+          "oklch(49% 0.045 266)",
+          "oklch(61% 0.045 266)",
+          "oklch(72% 0.045 266)",
+          "oklch(84% 0.045 266)",
+          "oklch(95% 0.022 266)"
+        ]
+      },
+      "board": {
+        "role": "neutral",
+        "displayName": "Board",
+        "canonical": "oklch(16.3% 0.002 107)",
+        "tonalRamp": [
+          "oklch(15% 0.002 107)",
+          "oklch(26% 0.002 107)",
+          "oklch(38% 0.002 107)",
+          "oklch(49% 0.002 107)",
+          "oklch(61% 0.002 107)",
+          "oklch(72% 0.002 107)",
+          "oklch(84% 0.002 107)",
+          "oklch(95% 0.002 107)"
+        ]
+      },
+      "tile-top": {
+        "role": "neutral",
+        "displayName": "Tile Top",
+        "canonical": "oklch(26.4% 0.004 107)",
+        "tonalRamp": [
+          "oklch(15% 0.004 107)",
+          "oklch(26% 0.004 107)",
+          "oklch(38% 0.004 107)",
+          "oklch(49% 0.004 107)",
+          "oklch(61% 0.004 107)",
+          "oklch(72% 0.004 107)",
+          "oklch(84% 0.004 107)",
+          "oklch(95% 0.004 107)"
+        ]
+      },
+      "tile-bottom": {
+        "role": "neutral",
+        "displayName": "Tile Bottom",
+        "canonical": "oklch(22.1% 0.004 107)",
+        "tonalRamp": [
+          "oklch(15% 0.004 107)",
+          "oklch(26% 0.004 107)",
+          "oklch(38% 0.004 107)",
+          "oklch(49% 0.004 107)",
+          "oklch(61% 0.004 107)",
+          "oklch(72% 0.004 107)",
+          "oklch(84% 0.004 107)",
+          "oklch(95% 0.004 107)"
+        ]
+      },
+      "tile-ink": {
+        "role": "neutral",
+        "displayName": "Tile Ink",
+        "canonical": "oklch(95.2% 0.012 92)",
+        "tonalRamp": [
+          "oklch(15% 0.012 92)",
+          "oklch(26% 0.012 92)",
+          "oklch(38% 0.012 92)",
+          "oklch(49% 0.012 92)",
+          "oklch(61% 0.012 92)",
+          "oklch(72% 0.012 92)",
+          "oklch(84% 0.012 92)",
+          "oklch(95% 0.012 92)"
+        ]
+      },
+      "tile-yellow": {
+        "role": "primary",
+        "displayName": "Tile Yellow",
+        "canonical": "oklch(86.0% 0.172 89)",
+        "tonalRamp": [
+          "oklch(15% 0.062 89)",
+          "oklch(26% 0.108 89)",
+          "oklch(38% 0.153 89)",
+          "oklch(49% 0.172 89)",
+          "oklch(61% 0.159 89)",
+          "oklch(72% 0.113 89)",
+          "oklch(84% 0.068 89)",
+          "oklch(95% 0.022 89)"
+        ],
+        "aliasOf": "yellow"
+      },
+      "line-blue": {
+        "role": "tertiary",
+        "displayName": "Blue Route",
+        "canonical": "oklch(38.6% 0.148 261)",
+        "tonalRamp": [
+          "oklch(15% 0.062 261)",
+          "oklch(26% 0.108 261)",
+          "oklch(38% 0.148 261)",
+          "oklch(49% 0.148 261)",
+          "oklch(61% 0.148 261)",
+          "oklch(72% 0.113 261)",
+          "oklch(84% 0.068 261)",
+          "oklch(95% 0.022 261)"
+        ],
+        "aliasOf": "blue"
+      },
+      "line-red": {
+        "role": "tertiary",
+        "displayName": "Red Route",
+        "canonical": "oklch(58.2% 0.195 30)",
+        "tonalRamp": [
+          "oklch(15% 0.062 30)",
+          "oklch(26% 0.108 30)",
+          "oklch(38% 0.153 30)",
+          "oklch(49% 0.195 30)",
+          "oklch(61% 0.159 30)",
+          "oklch(72% 0.113 30)",
+          "oklch(84% 0.068 30)",
+          "oklch(95% 0.022 30)"
+        ]
+      },
+      "line-green": {
+        "role": "tertiary",
+        "displayName": "Green Route",
+        "canonical": "oklch(52.7% 0.120 158)",
+        "tonalRamp": [
+          "oklch(15% 0.062 158)",
+          "oklch(26% 0.108 158)",
+          "oklch(38% 0.120 158)",
+          "oklch(49% 0.120 158)",
+          "oklch(61% 0.120 158)",
+          "oklch(72% 0.113 158)",
+          "oklch(84% 0.068 158)",
+          "oklch(95% 0.022 158)"
+        ]
+      },
+      "l-yellow": {
+        "role": "tertiary",
+        "displayName": "Yellow Line",
+        "canonical": "oklch(86.0% 0.172 89)",
+        "tonalRamp": [
+          "oklch(15% 0.062 89)",
+          "oklch(26% 0.108 89)",
+          "oklch(38% 0.153 89)",
+          "oklch(49% 0.172 89)",
+          "oklch(61% 0.159 89)",
+          "oklch(72% 0.113 89)",
+          "oklch(84% 0.068 89)",
+          "oklch(95% 0.022 89)"
+        ],
+        "aliasOf": "yellow"
+      },
+      "l-white": {
+        "role": "tertiary",
+        "displayName": "White Line",
+        "canonical": "oklch(96.6% 0.004 122)",
+        "tonalRamp": [
+          "oklch(15% 0.004 122)",
+          "oklch(26% 0.004 122)",
+          "oklch(38% 0.004 122)",
+          "oklch(49% 0.004 122)",
+          "oklch(61% 0.004 122)",
+          "oklch(72% 0.004 122)",
+          "oklch(84% 0.004 122)",
+          "oklch(95% 0.004 122)"
+        ],
+        "aliasOf": "concourse"
+      },
+      "l-sky": {
+        "role": "tertiary",
+        "displayName": "Sky Line",
+        "canonical": "oklch(83.1% 0.094 241)",
+        "tonalRamp": [
+          "oklch(15% 0.062 241)",
+          "oklch(26% 0.094 241)",
+          "oklch(38% 0.094 241)",
+          "oklch(49% 0.094 241)",
+          "oklch(61% 0.094 241)",
+          "oklch(72% 0.094 241)",
+          "oklch(84% 0.068 241)",
+          "oklch(95% 0.022 241)"
+        ]
+      },
+      "l-green": {
+        "role": "tertiary",
+        "displayName": "Green Line",
+        "canonical": "oklch(79.9% 0.143 158)",
+        "tonalRamp": [
+          "oklch(15% 0.062 158)",
+          "oklch(26% 0.108 158)",
+          "oklch(38% 0.143 158)",
+          "oklch(49% 0.143 158)",
+          "oklch(61% 0.143 158)",
+          "oklch(72% 0.113 158)",
+          "oklch(84% 0.068 158)",
+          "oklch(95% 0.022 158)"
+        ]
+      },
+      "l-coral": {
+        "role": "tertiary",
+        "displayName": "Coral Line",
+        "canonical": "oklch(75.8% 0.145 30)",
+        "tonalRamp": [
+          "oklch(15% 0.062 30)",
+          "oklch(26% 0.108 30)",
+          "oklch(38% 0.145 30)",
+          "oklch(49% 0.145 30)",
+          "oklch(61% 0.145 30)",
+          "oklch(72% 0.113 30)",
+          "oklch(84% 0.068 30)",
+          "oklch(95% 0.022 30)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Section headings, uppercase."
+      },
+      "display-boarding": {
+        "displayName": "Display Boarding",
+        "purpose": "The contact section heading on the yellow flood."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Departure (project) names."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Timetable roles; scaled variants for line names, ticket names and the boarding strip label."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Hero positioning sentence and boarding lede."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraph copy with tabular numerals, 52 to 62ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Condensed uppercase wayfinding: nav, buttons, via lines, operators, stops, footer."
+      },
+      "label-column": {
+        "displayName": "Label Column",
+        "purpose": "Wide-tracked column heads, board head and profile fact terms."
+      },
+      "flap": {
+        "displayName": "Flap",
+        "purpose": "Split-flap tile glyphs, sized from the row's inline size in cqi."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hung-board",
+        "value": "0 1px 0 #3a3a37 inset, 0 40px 60px -30px rgba(18, 18, 18, .55), 0 12px 24px -12px rgba(18, 18, 18, .35)",
+        "purpose": "The hero board only; long soft drop of a mounted object."
+      },
+      {
+        "name": "framed-portrait",
+        "value": "0 40px 60px -34px rgba(18, 18, 18, .55)",
+        "purpose": "The portrait frame."
+      },
+      {
+        "name": "tile-bevel",
+        "value": "0 1px 0 rgba(255, 255, 255, .05), 0 2px 3px rgba(0, 0, 0, .5)",
+        "purpose": "Every split-flap tile."
+      },
+      {
+        "name": "tile-hinge",
+        "value": "0 1px 0 rgba(255, 255, 255, .06)",
+        "purpose": "Highlight under the 1px black hinge line."
+      },
+      {
+        "name": "boarding-strip",
+        "value": "inset 0 0 0 2px var(--ink), 0 14px 24px -14px rgba(87, 68, 0, .6)",
+        "purpose": "Primary action at rest."
+      },
+      {
+        "name": "boarding-strip-hover",
+        "value": "inset 0 0 0 2px var(--ink), 0 22px 30px -16px rgba(87, 68, 0, .7)",
+        "purpose": "Primary action on hover, with a 2px lift."
+      },
+      {
+        "name": "ink-ring",
+        "value": "inset 0 0 0 2px var(--ink)",
+        "purpose": "Printed ink border on the mark."
+      },
+      {
+        "name": "route-stop",
+        "value": "inset 0 0 0 5px var(--ink)",
+        "purpose": "Route stop disc ring."
+      },
+      {
+        "name": "route-terminus",
+        "value": "inset 0 0 0 6px var(--line), 0 0 0 3px var(--ink)",
+        "purpose": "First and last route stops."
+      },
+      {
+        "name": "network-stop",
+        "value": "0 0 0 4px var(--blue-deep)",
+        "purpose": "Stops on blue (3px when vertical)."
+      },
+      {
+        "name": "network-stop-now",
+        "value": "0 0 0 4px var(--blue-deep), 0 0 0 7px var(--yellow)",
+        "purpose": "Current-focus stops on blue."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16, 1, .3, 1)",
+        "purpose": "Default for hovers, draw-ins and reveals (--ease-out)."
+      },
+      {
+        "name": "ease-in-out",
+        "value": "cubic-bezier(.65, 0, .35, 1)",
+        "purpose": "Portrait clip reveal (--ease-in-out)."
+      },
+      {
+        "name": "flip-fall",
+        "value": "cubic-bezier(.55, 0, 1, .45)",
+        "purpose": "Upper leaf falling to 90deg."
+      },
+      {
+        "name": "flip-land",
+        "value": "cubic-bezier(.2, .9, .3, 1.25)",
+        "purpose": "Lower leaf landing with a slight mechanical overshoot."
+      },
+      {
+        "name": "flip-duration",
+        "value": "70ms to 100ms per flip (half per leaf)",
+        "purpose": "One step through the drum; randomised per flip."
+      },
+      {
+        "name": "flip-walk",
+        "value": "5 to 11 steps",
+        "purpose": "Cap on drum steps per tile so long walks start nearby."
+      },
+      {
+        "name": "flip-stagger",
+        "value": "34ms (default) / 60ms (code, sector, years boards) / 28ms (mini board)",
+        "purpose": "Per-tile delay within a row."
+      },
+      {
+        "name": "board-rows",
+        "value": "250ms + 220ms per row",
+        "purpose": "Hero board row start after fonts load."
+      },
+      {
+        "name": "draw-track",
+        "value": "1.4s",
+        "purpose": "Route and network tracks scale in along their axis."
+      },
+      {
+        "name": "draw-stop",
+        "value": ".5s, delay i * 110ms + 200ms",
+        "purpose": "Stop discs scale in."
+      },
+      {
+        "name": "draw-label",
+        "value": ".6s, delay i * 110ms + 300ms, rise 8px",
+        "purpose": "Stop labels fade and rise in."
+      },
+      {
+        "name": "portrait-reveal",
+        "value": "1.3s clip-path inset wipe",
+        "purpose": "Portrait image reveal."
+      },
+      {
+        "name": "board-recede",
+        "value": "scroll-driven, exit 10% to 100%: scale .94, brightness .85",
+        "purpose": "Board recedes as it leaves view where animation-timeline is supported."
+      },
+      {
+        "name": "hover-quick",
+        "value": ".2s to .4s",
+        "purpose": "Colour swaps, underline wipes, lifts and arrow nudges."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "no .motion class; tiles render settled; transitions .01ms; animations none",
+        "purpose": "Everything renders in its final state."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tables-fold",
+        "value": "1080px"
+      },
+      {
+        "name": "single-column",
+        "value": "860px"
+      },
+      {
+        "name": "narrow-board",
+        "value": "720px"
+      },
+      {
+        "name": "small-phone",
+        "value": "400px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Split-flap Row",
+      "kind": "custom",
+      "refersTo": "flap-tile-signal",
+      "description": "Signature: a row of --n equal tiles on a small board; glyphs and radius sized in cqi against the row. Shown settled (as under reduced motion).",
+      "html": "<div class=\"ds-board\"><div class=\"ds-flap\" style=\"--n:8\"><span class=\"ds-tile\"><span class=\"ds-half ds-top\"><span>2</span></span><span class=\"ds-half ds-bottom\"><span>2</span></span></span><span class=\"ds-tile\"><span class=\"ds-half ds-top\"><span>0</span></span><span class=\"ds-half ds-bottom\"><span>0</span></span></span><span class=\"ds-tile\"><span class=\"ds-half ds-top\"><span>2</span></span><span class=\"ds-half ds-bottom\"><span>2</span></span></span><span class=\"ds-tile\"><span class=\"ds-half ds-top\"><span>5</span></span><span class=\"ds-half ds-bottom\"><span>5</span></span></span><span class=\"ds-tile\"><span class=\"ds-half ds-top\"><span>-</span></span><span class=\"ds-half ds-bottom\"><span>-</span></span></span><span class=\"ds-tile\"><span class=\"ds-half ds-top\"><span>N</span></span><span class=\"ds-half ds-bottom\"><span>N</span></span></span><span class=\"ds-tile\"><span class=\"ds-half ds-top\"><span>O</span></span><span class=\"ds-half ds-bottom\"><span>O</span></span></span><span class=\"ds-tile\"><span class=\"ds-half ds-top\"><span>W</span></span><span class=\"ds-half ds-bottom\"><span>W</span></span></span></div></div>",
+      "css": ".ds-board { padding: 6px; background: var(--board, #0e0e0d); border-radius: 5px; width: 260px; } .ds-flap { --gap: max(2px, calc(7% / var(--n))); container-type: inline-size; display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: var(--gap); color: var(--tile-yellow, #ffc917); font-family: \"Barlow Condensed\", \"Arial Narrow\", sans-serif; font-weight: 600; } .ds-tile { position: relative; aspect-ratio: .7; border-radius: max(2px, 5cqi / var(--n)); font-size: calc(100cqi / var(--n) * 1.12); line-height: 1; box-shadow: 0 1px 0 rgba(255,255,255,.05), 0 2px 3px rgba(0,0,0,.5); } .ds-half { position: absolute; left: 0; right: 0; height: 50%; overflow: hidden; background: var(--tile-top, #252523); } .ds-top { top: 0; border-radius: inherit; border-bottom-left-radius: 0; border-bottom-right-radius: 0; } .ds-bottom { bottom: 0; background: var(--tile-bottom, #1b1b19); border-radius: inherit; border-top-left-radius: 0; border-top-right-radius: 0; } .ds-half > span { position: absolute; left: 0; right: 0; height: 200%; display: grid; place-items: center; } .ds-top > span { top: 0; } .ds-bottom > span { bottom: 0; } .ds-tile::after { content: \"\"; position: absolute; left: 0; right: 0; top: calc(50% - .5px); height: 1px; background: #000; box-shadow: 0 1px 0 rgba(255,255,255,.06); }"
+    },
+    {
+      "name": "Boarding Strip",
+      "kind": "button",
+      "refersTo": "boarding-strip",
+      "description": "Primary action: a yellow sign with an ink ring, display label and destination line.",
+      "html": "<a class=\"ds-strip\" href=\"#\"><span class=\"ds-strip-label\">Now boarding</span><span class=\"ds-strip-dest\">Lead roles &amp; contract work</span><svg class=\"ds-strip-icon\" width=\"34\" height=\"34\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-7 7 7-7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"square\"/></svg></a>",
+      "css": ".ds-strip { display: grid; grid-template-columns: 1fr auto; column-gap: 20px; align-items: center; padding: 18px 22px; max-width: 460px; background: var(--yellow, #ffc917); color: var(--ink, #121212); text-decoration: none; border-radius: 4px; box-shadow: inset 0 0 0 2px var(--ink, #121212), 0 14px 24px -14px rgba(87,68,0,.6); transition: transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s cubic-bezier(.16,1,.3,1); } .ds-strip:hover { transform: translateY(-2px); box-shadow: inset 0 0 0 2px var(--ink, #121212), 0 22px 30px -16px rgba(87,68,0,.7); } .ds-strip:active { transform: translateY(0); } .ds-strip:focus-visible { outline: 3px solid var(--blue, #0b3d91); outline-offset: 3px; } .ds-strip-label { font: 800 clamp(1.9rem, 3vw, 2.6rem)/1 \"Big Shoulders Display\", \"Barlow Condensed\", \"Arial Narrow\", sans-serif; text-transform: uppercase; letter-spacing: .01em; } .ds-strip-dest { grid-row: 2; margin-top: 4px; font: 600 1rem/1.2 \"Barlow Condensed\", \"Arial Narrow\", sans-serif; text-transform: uppercase; letter-spacing: .1em; color: var(--yellow-ink-2, #574400); } .ds-strip-icon { grid-row: 1 / 3; grid-column: 2; transition: transform .4s cubic-bezier(.16,1,.3,1); } .ds-strip:hover .ds-strip-icon { transform: translateX(6px); }"
+    },
+    {
+      "name": "Ink Control",
+      "kind": "button",
+      "refersTo": "copy-button",
+      "description": "Ink field, yellow condensed label; turns platform blue on hover. Used for the sign CTA and copy button.",
+      "html": "<button class=\"ds-ink\" type=\"button\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M8 8h12v12H8zM4 16V4h12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\"/></svg><span>Copy email</span></button>",
+      "css": ".ds-ink { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; background: var(--ink, #121212); color: var(--yellow, #ffc917); border: 0; border-radius: 3px; font: 600 1rem/1 \"Barlow Condensed\", \"Arial Narrow\", sans-serif; text-transform: uppercase; letter-spacing: .1em; cursor: pointer; transition: background-color .2s, color .2s, transform .15s; } .ds-ink:hover { background: var(--blue, #0b3d91); color: var(--blue-ink, #f3f4f1); } .ds-ink:active { transform: scale(.97); } .ds-ink:focus-visible { outline: 3px solid var(--blue, #0b3d91); outline-offset: 3px; }"
+    },
+    {
+      "name": "Sign Bar",
+      "kind": "nav",
+      "refersTo": "sign-cta",
+      "description": "Sticky concourse bar: yellow mark, condensed nav with wipe-in underline, ink Contact CTA.",
+      "html": "<header class=\"ds-sign\"><a class=\"ds-mark\" href=\"#\">JI</a><nav class=\"ds-nav\"><a href=\"#\" aria-current=\"true\">Work</a><a href=\"#\">Career</a><a href=\"#\">Stack</a><a class=\"ds-cta\" href=\"#\">Contact</a></nav></header>",
+      "css": ".ds-sign { display: flex; align-items: center; gap: 24px; height: 64px; padding: 0 24px; background: var(--concourse, #f3f4f1); color: var(--ink, #121212); border-bottom: 2px solid var(--rule, #121212); } .ds-mark { display: grid; place-items: center; width: 40px; height: 40px; background: var(--yellow, #ffc917); color: var(--ink, #121212); font: 800 1.35rem/1 \"Big Shoulders Display\", \"Barlow Condensed\", \"Arial Narrow\", sans-serif; text-decoration: none; border-radius: 4px; box-shadow: inset 0 0 0 2px var(--ink, #121212); } .ds-nav { margin-left: auto; display: flex; align-items: center; gap: 28px; font: 600 1rem/1 \"Barlow Condensed\", \"Arial Narrow\", sans-serif; text-transform: uppercase; letter-spacing: .1em; } .ds-nav a { position: relative; padding: 8px 0; color: inherit; text-decoration: none; } .ds-nav a:not(.ds-cta)::after { content: \"\"; position: absolute; left: 0; right: 0; bottom: 2px; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform .35s cubic-bezier(.16,1,.3,1); } .ds-nav a:not(.ds-cta):hover::after, .ds-nav a[aria-current=\"true\"]::after { transform: scaleX(1); transform-origin: left; } .ds-nav a:focus-visible, .ds-mark:focus-visible { outline: 3px solid var(--blue, #0b3d91); outline-offset: 3px; } .ds-cta { padding: 10px 16px; background: var(--ink, #121212); color: var(--yellow, #ffc917); border-radius: 3px; transition: background-color .2s, color .2s; } .ds-cta:hover { background: var(--blue, #0b3d91); color: var(--blue-ink, #f3f4f1); }"
+    },
+    {
+      "name": "Route Line",
+      "kind": "custom",
+      "description": "A system drawn as an 8px track in the departure's line colour with round stops; termini ringed in line colour.",
+      "html": "<ol class=\"ds-route\" style=\"--line: var(--line-red, #d63a2a)\"><li>Storefront</li><li>Laravel API</li><li>Inventory</li><li>Analytics</li></ol>",
+      "css": ".ds-route { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; max-width: 640px; color: var(--ink, #121212); font: 600 1rem/1.2 \"Barlow Condensed\", \"Arial Narrow\", sans-serif; text-transform: uppercase; letter-spacing: .06em; } .ds-route::before { content: \"\"; position: absolute; left: 10px; right: 10px; top: 7px; height: 8px; background: var(--line); border-radius: 4px; } .ds-route li { position: relative; padding-top: 34px; padding-right: 8px; } .ds-route li::before { content: \"\"; position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--panel, #fff); box-shadow: inset 0 0 0 5px var(--ink, #121212); } .ds-route li:first-child::before, .ds-route li:last-child::before { box-shadow: inset 0 0 0 6px var(--line), 0 0 0 3px var(--ink, #121212); } .ds-route li:last-child { text-align: right; padding-right: 0; } .ds-route li:last-child::before { left: auto; right: 0; }"
+    },
+    {
+      "name": "Network Line",
+      "kind": "custom",
+      "refersTo": "line-bullet",
+      "description": "On the blue flood: a round line bullet and an 8px track with concourse stops; current stops in yellow with a double ring.",
+      "html": "<div class=\"ds-net\" style=\"--c: var(--l-sky, #8fd0ff)\"><h3 class=\"ds-net-name\"><span class=\"ds-bullet\">F</span>Frontend</h3><ul class=\"ds-stops\"><li class=\"is-now\">React <span class=\"ds-now\">now</span></li><li>Vue.js</li><li>Angular</li><li>Next.js</li></ul></div>",
+      "css": ".ds-net { display: grid; gap: 20px; padding: 28px; background: var(--blue, #0b3d91); color: var(--blue-ink, #f3f4f1); } .ds-net-name { display: flex; align-items: center; gap: 14px; margin: 0; font: 800 2rem/1 \"Big Shoulders Display\", \"Barlow Condensed\", \"Arial Narrow\", sans-serif; text-transform: uppercase; } .ds-bullet { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: var(--c); color: var(--blue-deep, #082d6b); font: 800 1.5rem/1 \"Big Shoulders Display\", \"Barlow Condensed\", \"Arial Narrow\", sans-serif; } .ds-stops { position: relative; display: flex; margin: 0; padding: 0; list-style: none; height: 64px; align-items: flex-end; font: 600 .95rem/1.15 \"Barlow Condensed\", \"Arial Narrow\", sans-serif; text-transform: uppercase; letter-spacing: .05em; } .ds-stops::before { content: \"\"; position: absolute; left: 0; right: 0; top: 14px; height: 8px; background: var(--c); border-radius: 4px; } .ds-stops li { position: relative; flex: 1 1 0; padding-right: 6px; } .ds-stops li::before { content: \"\"; position: absolute; left: 0; top: -41px; width: 18px; height: 18px; border-radius: 50%; background: var(--blue-ink, #f3f4f1); box-shadow: 0 0 0 4px var(--blue-deep, #082d6b); } .ds-stops li.is-now::before { background: var(--yellow, #ffc917); box-shadow: 0 0 0 4px var(--blue-deep, #082d6b), 0 0 0 7px var(--yellow, #ffc917); } .ds-now { margin-left: 4px; color: var(--yellow, #ffc917); font-size: .8rem; letter-spacing: .14em; }"
+    },
+    {
+      "name": "Timetable Row",
+      "kind": "card",
+      "refersTo": "station-now",
+      "description": "Ruled row: years board, role, operator, note. The current service is a yellow field with yellow tiles.",
+      "html": "<ol class=\"ds-tt\"><li class=\"ds-station is-now\"><span class=\"ds-years\">2025-NOW</span><h3>Lead Software Engineer</h3><p class=\"ds-note\">Leading backend work on Node.js services.</p></li><li class=\"ds-station\"><span class=\"ds-years\">2021-25</span><h3>Application Developer</h3><p class=\"ds-note\">IBM · Philippines</p></li></ol>",
+      "css": ".ds-tt { margin: 0; padding: 0; list-style: none; max-width: 720px; color: var(--ink, #121212); border-bottom: 2px solid var(--rule, #121212); } .ds-station { display: grid; grid-template-columns: 120px minmax(0, 1fr); column-gap: 24px; row-gap: 8px; align-items: baseline; padding: 22px 14px; border-top: 1px solid var(--hairline, #d3d6d0); } .ds-station:first-child { border-top: 2px solid var(--rule, #121212); } .ds-station.is-now { background: var(--yellow, #ffc917); } .ds-years { grid-row: 1 / 3; align-self: start; padding: 6px 8px; background: var(--board, #0e0e0d); color: var(--tile-ink, #f2efe6); border-radius: 4px; font: 600 16px/1 \"Barlow Condensed\", \"Arial Narrow\", sans-serif; letter-spacing: .08em; } .is-now .ds-years { color: var(--tile-yellow, #ffc917); } .ds-station h3 { margin: 0; font: 800 clamp(1.5rem, 2.3vw, 2rem)/1 \"Big Shoulders Display\", \"Barlow Condensed\", \"Arial Narrow\", sans-serif; text-transform: uppercase; } .ds-note { margin: 0; grid-column: 2; color: var(--ink-2, #464a50); font: 400 1.125rem/1.6 Barlow, \"Helvetica Neue\", Arial, sans-serif; } .is-now .ds-note { color: var(--yellow-ink-2, #574400); }"
+    },
+    {
+      "name": "Ticket Link",
+      "kind": "custom",
+      "refersTo": "ticket-link",
+      "description": "Contact row on the yellow flood: icon, display name, handle, arrow; hover floods the row ink.",
+      "html": "<div class=\"ds-tickets\"><a class=\"ds-ticket\" href=\"#\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M3 5h18v14H3zm0 0 9 8 9-8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\"/></svg><span class=\"ds-ticket-name\">Email</span><span class=\"ds-ticket-handle\">jaylordibe@gmail.com</span><svg width=\"22\" height=\"22\" class=\"ds-ticket-arrow\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-7 7 7-7 7\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"square\"/></svg></a></div>",
+      "css": ".ds-tickets { padding: 24px; background: var(--yellow, #ffc917); max-width: 560px; } .ds-ticket { display: grid; grid-template-columns: auto minmax(0, 1fr) auto auto; align-items: center; gap: 16px; padding: 20px 4px; color: var(--ink, #121212); border-top: 2px solid var(--ink, #121212); border-bottom: 2px solid var(--ink, #121212); text-decoration: none; font: 600 1.05rem/1.2 \"Barlow Condensed\", \"Arial Narrow\", sans-serif; text-transform: uppercase; letter-spacing: .08em; transition: background-color .25s cubic-bezier(.16,1,.3,1), color .25s cubic-bezier(.16,1,.3,1), padding .35s cubic-bezier(.16,1,.3,1); } .ds-ticket:hover { background: var(--ink, #121212); color: var(--yellow, #ffc917); padding-left: 16px; padding-right: 16px; } .ds-ticket:focus-visible { outline: 3px solid var(--blue, #0b3d91); outline-offset: 3px; } .ds-ticket-name { font: 800 1.6rem/1 \"Big Shoulders Display\", \"Barlow Condensed\", \"Arial Narrow\", sans-serif; letter-spacing: .02em; } .ds-ticket-handle { color: var(--yellow-ink-2, #574400); transition: color .25s; } .ds-ticket:hover .ds-ticket-handle { color: #e8d48f; } .ds-ticket-arrow { transition: transform .35s cubic-bezier(.16,1,.3,1); } .ds-ticket:hover .ds-ticket-arrow { transform: translateX(4px); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Concourse Departures Board",
+    "overview": "The page is a bright station concourse: cool platform-white floor, ink type, full-width rules, and one mounted split-flap board hanging from the ceiling at the top. Everything that carries information speaks in the vocabulary of transit signage: departures with codes and sectors, routes drawn as lines with stops, a timetable, a network map of coloured lines, a boarding call. The board's dark tile material is the only dark object on the concourse; its family (the mini board in the sign bar, the code, sector and year boards, the portrait frame, the footer) all share it.\n\nColour is committed, not sprinkled. Signal yellow and platform blue arrive as whole flooded sections that cut hard against the concourse, the way a station paints whole walls in line colour. Type runs in two voices plus a signage label: a condensed display face for names and headings, a highway-sign grotesk for reading, and a condensed uppercase label for every piece of wayfinding. Hierarchy comes from case, size and rule weight, not from boxes.\n\nMotion is mechanical. Tiles flip leaf by leaf through the drum in order; routes and lines draw themselves in left to right with stops popping on in sequence. Nothing floats, glows or fades in for decoration. With reduced motion, everything renders settled.",
+    "keyCharacteristics": [
+      "One dark object family (the board material) on a light concourse.",
+      "Whole-section colour floods in yellow and blue with hard edges.",
+      "Condensed display face + grotesk body + condensed uppercase labels.",
+      "Transit-native structures: split-flap rows, route lines with stops, timetable rows, network lines, ticket rows.",
+      "Full-width 2px ink rules and 1px hairlines instead of cards.",
+      "Mechanical, ordered motion that is fully removed under reduced motion."
+    ],
+    "rules": [
+      {
+        "name": "The Flood Rule",
+        "body": "Yellow and blue are applied as whole-section floods or whole-row fills with hard edges, never as tints, gradients or soft washes. A section is either concourse, blue or yellow.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Dark Object Rule",
+        "body": "Dark surfaces are reserved for the board material and its family (mini board, code/sector/year boards, portrait frame) plus the ink controls and footer. No dark cards or dark sections elsewhere.",
+        "section": "colors"
+      },
+      {
+        "name": "The Yellow Is A Field Rule",
+        "body": "Signal yellow never sets type directly on the concourse (1.4:1). It appears as a field under ink type, or as type on ink, board or blue.",
+        "section": "colors"
+      },
+      {
+        "name": "The Line Colour Rule",
+        "body": "Route and network colours mark tracks, terminus rings and bullets only; text stays ink, concourse or tile ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Case Carries Hierarchy Rule",
+        "body": "Display and label voices are always uppercase; body copy is always sentence case. Weight 800 belongs to the display face only.",
+        "section": "typography"
+      },
+      {
+        "name": "The Three Voices Rule",
+        "body": "Every text element uses exactly one of display, body or condensed label. No fourth face, no monospace, no italics.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mounted Object Rule",
+        "body": "Only things that would physically hang or sit in a station (the board, the framed portrait, the boarding strip) cast shadows. Rows, sections and text never do.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** flood whole sections in yellow or blue with hard edges, and keep every other section on the concourse.",
+      "**Do** present any short code, year, sector or status as a split-flap row, with `--n` equal to its `data-length` and glyphs sized in `cqi`.",
+      "**Do** draw sequences and systems as lines with stops: 8px track, round stops, coloured termini.",
+      "**Do** set structured data as ruled rows (2px ink between groups, 1px hairline within), not cards.",
+      "**Do** keep wayfinding text in the condensed uppercase label voice with .06em to .18em tracking.",
+      "**Do** keep motion mechanical and ordered, and render everything settled when reduced motion is requested."
+    ],
+    "donts": [
+      "**Don't** add dark sections, dark cards or a dark mode; the board family is the only dark material.",
+      "**Don't** use pill chips, badges or tag clouds for skills or tech; stacks are stops on a line.",
+      "**Don't** use glass, backdrop blur, glows or gradient hero fields.",
+      "**Don't** set signal yellow type on the concourse.",
+      "**Don't** cast shadows from rows, sections or text; only mounted objects carry depth.",
+      "**Don't** add a fourth typeface, monospace or italic.",
+      "**Don't** fade or float elements in for decoration; motion is flips and draw-ins only."
+    ]
+  }
+}

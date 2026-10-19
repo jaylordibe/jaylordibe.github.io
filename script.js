@@ -1,454 +1,259 @@
-// DOM Elements
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-const navLinks = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('section');
-const navbar = document.querySelector('.navbar');
+// Departures: split-flap boards, the live clock, section signage and reveals.
 
-// Mobile Navigation Toggle with animations
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    
-    // Prevent body scroll when menu is open
-    if (navMenu.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = 'auto';
-    }
-});
+const CHARS = ' ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+·&-.:/';
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Animate nav links on mobile menu open
-navMenu.addEventListener('transitionend', () => {
-    if (navMenu.classList.contains('active')) {
-        const navLinks = navMenu.querySelectorAll('.nav-link');
-        navLinks.forEach((link, index) => {
-            link.style.animationDelay = `${index * 0.1}s`;
-            link.classList.add('animate-in');
-        });
-    }
-});
-
-// Close mobile menu when clicking on a link
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
-});
-
-// Smooth scrolling for navigation links
-navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-        
-        if (targetSection) {
-            const offsetTop = targetSection.offsetTop - 70; // Account for fixed navbar
-            window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Navbar scroll effects
-let lastScrollTop = 0;
-let ticking = false;
-
-function updateNavbar() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // Add scrolled class for styling
-    if (scrollTop > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
-    
-    // Keep navbar always visible (disabled auto-hide)
-    // if (scrollTop > lastScrollTop && scrollTop > 100) {
-    //     // Scrolling down
-    //     navbar.classList.add('hidden');
-    // } else {
-    //     // Scrolling up
-    //     navbar.classList.remove('hidden');
-    // }
-    
-    lastScrollTop = scrollTop;
-    ticking = false;
+if (!reduceMotion) {
+    document.documentElement.classList.add('motion');
 }
 
-function requestTick() {
-    if (!ticking) {
-        requestAnimationFrame(updateNavbar);
-        ticking = true;
-    }
+// ---------------------------------------------------------------------------
+// Split-flap tiles
+// ---------------------------------------------------------------------------
+
+function createTile() {
+    const tile = document.createElement('span');
+    tile.className = 'tile';
+    tile.innerHTML =
+        '<span class="half top"><span></span></span>' +
+        '<span class="half bottom"><span></span></span>' +
+        '<span class="leaf leaf-top"><span></span></span>' +
+        '<span class="leaf leaf-bottom"><span></span></span>';
+    const [top, bottom, leafTop, leafBottom] = tile.querySelectorAll('.half > span, .leaf > span');
+    tile._faces = { top, bottom, leafTop, leafBottom };
+    tile._char = ' ';
+    return tile;
 }
 
-window.addEventListener('scroll', requestTick);
-
-// Active navigation link highlighting
-window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// Intersection Observer for fade-in animations
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, observerOptions);
-
-// Observe elements for animation
-document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.skill-category, .project-card, .contact-item, .stat');
-    animatedElements.forEach(el => {
-        el.classList.add('fade-in');
-        observer.observe(el);
-    });
-});
-
-// Typing animation for hero title
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-    
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-    type();
+function showChar(tile, char) {
+    const { top, bottom, leafTop, leafBottom } = tile._faces;
+    top.textContent = bottom.textContent = leafTop.textContent = leafBottom.textContent = char;
+    tile._char = char;
 }
 
-// Parallax effect for floating shapes
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const shapes = document.querySelectorAll('.shape');
-    
-    shapes.forEach((shape, index) => {
-        const speed = 0.5 + (index * 0.1);
-        const yPos = -(scrolled * speed);
-        shape.style.transform = `translateY(${yPos}px)`;
-    });
-});
+// One mechanical flip: the upper leaf falls away, the next lower leaf lands.
+// The characters advance on a timer, not on animation events, so a paused
+// animation (background tab, screenshot tool) can never strand a tile mid-word.
+function flipOnce(tile, next, duration) {
+    const { top, bottom, leafTop, leafBottom } = tile._faces;
+    const current = tile._char;
+    top.textContent = next;
+    bottom.textContent = current;
+    leafTop.textContent = current;
+    leafBottom.textContent = next;
+    tile._char = next;
+    tile.classList.add('flipping');
 
-// Code window typing animation
-function animateCodeWindow() {
-    const codeLines = document.querySelectorAll('.code-line');
-    codeLines.forEach((line, index) => {
-        line.style.opacity = '0';
-        line.style.transform = 'translateX(-20px)';
-        
+    const half = duration / 2;
+    leafTop.parentElement.animate(
+        [{ transform: 'rotateX(0deg)' }, { transform: 'rotateX(-90deg)' }],
+        { duration: half, easing: 'cubic-bezier(.55, 0, 1, .45)', fill: 'both' }
+    );
+    leafBottom.parentElement.animate(
+        [{ transform: 'rotateX(90deg)' }, { transform: 'rotateX(0deg)' }],
+        { duration: half, delay: half, easing: 'cubic-bezier(.2, .9, .3, 1.25)', fill: 'both' }
+    );
+
+    return new Promise((resolve) => {
         setTimeout(() => {
-            line.style.transition = 'all 0.5s ease-out';
-            line.style.opacity = '1';
-            line.style.transform = 'translateX(0)';
-        }, index * 200);
+            settleTile(tile, next);
+            resolve();
+        }, duration);
     });
 }
 
-// Initialize code animation when hero section is visible
-const heroObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            setTimeout(animateCodeWindow, 1000);
-            heroObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-const heroSection = document.querySelector('.hero');
-if (heroSection) {
-    heroObserver.observe(heroSection);
+function settleTile(tile, char) {
+    tile.classList.remove('flipping');
+    tile.querySelectorAll('.leaf').forEach((leaf) => leaf.getAnimations().forEach((a) => a.cancel()));
+    showChar(tile, char);
 }
 
-// Skill items hover effect
-document.addEventListener('DOMContentLoaded', () => {
-    const skillItems = document.querySelectorAll('.skill-item');
-    
-    skillItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            item.style.transform = 'translateY(-5px) scale(1.05)';
-        });
-        
-        item.addEventListener('mouseleave', () => {
-            item.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-});
+// Real boards step through the drum in order, so each tile walks forward to
+// the target from a few letters back. Walks never wrap past the blank, so the
+// scramble shows letters and digits rather than punctuation.
+async function runTile(tile, target, delay, token, replay = false) {
+    await new Promise((resolve) => setTimeout(resolve, delay));
+    if (tile._token !== token) return;
+    const targetIndex = Math.max(0, CHARS.indexOf(target));
+    const currentIndex = CHARS.indexOf(tile._char);
+    const steps = 4 + Math.floor(Math.random() * 6);
+    let index = currentIndex <= targetIndex && targetIndex - currentIndex <= steps && !replay
+        ? currentIndex
+        : Math.max(0, targetIndex - steps);
+    showChar(tile, CHARS[index]);
+    while (index < targetIndex) {
+        if (tile._token !== token) return;
+        index += 1;
+        await flipOnce(tile, CHARS[index], 70 + Math.random() * 30);
+    }
+}
 
-// Project cards 3D tilt effect
-document.addEventListener('DOMContentLoaded', () => {
-    const projectCards = document.querySelectorAll('.project-card');
-    
-    projectCards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = (y - centerY) / 10;
-            const rotateY = (centerX - x) / 10;
-            
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+class FlapRow {
+    constructor(el) {
+        this.el = el;
+        this.length = Number(el.dataset.length) || el.dataset.flap.length;
+        el.style.setProperty('--n', this.length);
+        el.textContent = '';
+        // Rows render settled; only the hero board starts blank, because it
+        // flips on load rather than waiting for an observer.
+        const start = !reduceMotion && el.closest('.board') ? '' : el.dataset.flap;
+        const chars = this.normalize(start);
+        this.tiles = chars.map((char) => {
+            const tile = createTile();
+            showChar(tile, char);
+            el.appendChild(tile);
+            return tile;
         });
-        
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
-        });
-    });
-});
+    }
 
-// Smooth reveal animation for stats
-function animateStats() {
-    const stats = document.querySelectorAll('.stat-number');
-    
-    stats.forEach(stat => {
-        const target = parseInt(stat.textContent);
-        const increment = target / 50;
-        let current = 0;
-        
-        const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-                current = target;
-                clearInterval(timer);
+    normalize(text) {
+        return text.toUpperCase().padEnd(this.length, ' ').slice(0, this.length).split('')
+            .map((char) => (CHARS.includes(char) ? char : ' '));
+    }
+
+    set(text, { stagger = 34, replay = false } = {}) {
+        this.target = text;
+        const chars = this.normalize(text);
+        this.tiles.forEach((tile, i) => {
+            const char = chars[i];
+            if (reduceMotion) {
+                showChar(tile, char);
+                return;
             }
-            stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : '') + (stat.textContent.includes('%') ? '%' : '');
-        }, 30);
-    });
+            if (!replay && tile._char === char && !tile.classList.contains('flipping')) return;
+            const token = Symbol();
+            tile._token = token;
+            runTile(tile, char, i * stagger, token, replay);
+        });
+        // Whatever happens to timers and animations, the row reads correctly.
+        const settleAt = this.length * stagger + 1600;
+        clearTimeout(this.settleTimer);
+        this.settleTimer = setTimeout(() => this.settle(chars), settleAt);
+    }
+
+    settle(chars) {
+        this.tiles.forEach((tile, i) => {
+            tile._token = null;
+            settleTile(tile, chars[i]);
+        });
+    }
 }
 
-// Trigger stats animation when about section is visible
-const aboutObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            animateStats();
-            aboutObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
+// ---------------------------------------------------------------------------
+// Boot
+// ---------------------------------------------------------------------------
 
-const aboutSection = document.querySelector('.about');
-if (aboutSection) {
-    aboutObserver.observe(aboutSection);
-}
+const rows = new Map();
+document.querySelectorAll('[data-flap]').forEach((el) => rows.set(el, new FlapRow(el)));
 
-// Button ripple effect
-function createRipple(event) {
-    const button = event.currentTarget;
-    const ripple = document.createElement('span');
-    const rect = button.getBoundingClientRect();
-    const size = Math.max(rect.width, rect.height);
-    const x = event.clientX - rect.left - size / 2;
-    const y = event.clientY - rect.top - size / 2;
-    
-    ripple.style.width = ripple.style.height = size + 'px';
-    ripple.style.left = x + 'px';
-    ripple.style.top = y + 'px';
-    ripple.classList.add('ripple');
-    
-    button.appendChild(ripple);
-    
-    setTimeout(() => {
-        ripple.remove();
-    }, 600);
-}
-
-// Add ripple effect to buttons
-document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(button => {
-        button.addEventListener('click', createRipple);
+// Leaving the tab settles every board at once instead of resuming mid-flip.
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState !== 'hidden') return;
+    rows.forEach((row) => {
+        clearTimeout(row.settleTimer);
+        row.settle(row.normalize(row.target ?? row.el.dataset.flap));
     });
 });
 
-// Add ripple CSS
-const rippleCSS = `
-.ripple {
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.6);
-    transform: scale(0);
-    animation: ripple-animation 0.6s linear;
-    pointer-events: none;
-}
+const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
 
-@keyframes ripple-animation {
-    to {
-        transform: scale(4);
-        opacity: 0;
-    }
-}
-
-.btn {
-    position: relative;
-    overflow: hidden;
-}
-`;
-
-// Inject ripple CSS
-const style = document.createElement('style');
-style.textContent = rippleCSS;
-document.head.appendChild(style);
-
-// Scroll to top functionality
-function scrollToTop() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+fontsReady.then(() => {
+    // The hero board settles first, row by row.
+    // Only the rows laid out for this width (wide or narrow board) take part in the stagger.
+    const boardRows = [...document.querySelectorAll('.board [data-flap]')].filter((el) => el.offsetParent !== null);
+    document.querySelectorAll('.board [data-flap]').forEach((el) => {
+        const rowIndex = boardRows.indexOf(el);
+        if (rowIndex === -1) rows.get(el).set(el.dataset.flap);
+        else setTimeout(() => rows.get(el).set(el.dataset.flap), 250 + rowIndex * 220);
     });
-}
-
-// Add scroll to top button
-const scrollToTopBtn = document.createElement('button');
-scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-scrollToTopBtn.className = 'scroll-to-top';
-scrollToTopBtn.style.cssText = `
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-`;
-
-document.body.appendChild(scrollToTopBtn);
-
-// Show/hide scroll to top button
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollToTopBtn.style.opacity = '1';
-        scrollToTopBtn.style.visibility = 'visible';
-    } else {
-        scrollToTopBtn.style.opacity = '0';
-        scrollToTopBtn.style.visibility = 'hidden';
-    }
 });
 
-scrollToTopBtn.addEventListener('click', scrollToTop);
-
-// Loading animation
-window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-});
-
-// Add loading CSS
-const loadingCSS = `
-body {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-body.loaded {
-    opacity: 1;
-}
-`;
-
-const loadingStyle = document.createElement('style');
-loadingStyle.textContent = loadingCSS;
-document.head.appendChild(loadingStyle);
-
-// Performance optimization: Debounce scroll events
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
-
-// Apply debouncing to scroll events
-const debouncedScrollHandler = debounce(() => {
-    // Navbar background change (dark theme)
-    if (window.scrollY > 100) {
-        navbar.style.background = '#0f172a';
-        navbar.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.4)';
-    } else {
-        navbar.style.background = '#0f172a';
-        navbar.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
-    }
-    
-    // Active navigation link highlighting
-    let current = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-        }
+// Departure codes and sectors flip in when their row arrives on screen.
+const depObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.querySelectorAll('[data-flap]').forEach((el, i) => {
+            setTimeout(() => rows.get(el).set(el.dataset.flap, { stagger: 60, replay: true }), i * 180);
+        });
+        depObserver.unobserve(entry.target);
     });
+}, { threshold: 0.35 });
+document.querySelectorAll('.dep, .station').forEach((row) => depObserver.observe(row));
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
+// Routes, network lines and the portrait draw in once.
+const drawObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-in');
+        drawObserver.unobserve(entry.target);
     });
-    
-    // Scroll to top button visibility
-    if (window.scrollY > 300) {
-        scrollToTopBtn.style.opacity = '1';
-        scrollToTopBtn.style.visibility = 'visible';
-    } else {
-        scrollToTopBtn.style.opacity = '0';
-        scrollToTopBtn.style.visibility = 'hidden';
-    }
-}, 10);
+}, { threshold: 0.3, rootMargin: '0px 0px -8% 0px' });
+document.querySelectorAll('[data-draw]').forEach((el) => drawObserver.observe(el));
 
-window.addEventListener('scroll', debouncedScrollHandler);
+// The sign bar's board names the section you are standing in: the one
+// crossing the middle of the viewport. Measured on scroll, load and anchor
+// jumps so it never depends on an observer having fired.
+const mini = document.querySelector('.flap-mini');
+const navLinks = document.querySelectorAll('.sign-nav a');
+const stations = [...document.querySelectorAll('[data-station]')];
+let currentStation = null;
+let stationFrame = 0;
 
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Portfolio website loaded successfully!');
-    
-    // Add any additional initialization code here
-    const currentYear = new Date().getFullYear();
-    const footerYear = document.querySelector('.footer-text p');
-    if (footerYear) {
-        footerYear.textContent = footerYear.textContent.replace('2024', currentYear);
+function updateStation() {
+    stationFrame = 0;
+    const middle = window.innerHeight / 2;
+    const active = stations.find((section) => {
+        const rect = section.getBoundingClientRect();
+        return rect.top <= middle && rect.bottom > middle;
+    }) || stations[0];
+    if (active === currentStation) return;
+    currentStation = active;
+    rows.get(mini).set(active.dataset.station, { stagger: 28 });
+    navLinks.forEach((link) => {
+        if (link.getAttribute('href') === `#${active.id}`) link.setAttribute('aria-current', 'true');
+        else link.removeAttribute('aria-current');
+    });
+}
+const requestStation = () => { if (!stationFrame) stationFrame = requestAnimationFrame(updateStation); };
+window.addEventListener('scroll', requestStation, { passive: true });
+window.addEventListener('resize', requestStation);
+window.addEventListener('hashchange', requestStation);
+window.addEventListener('load', updateStation);
+updateStation();
+
+// Sign bar rule appears once the page moves.
+const sign = document.getElementById('sign');
+const onScroll = () => sign.classList.toggle('is-scrolled', window.scrollY > 8);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// Local time on the board.
+const clock = document.getElementById('clock');
+const timeFormat = new Intl.DateTimeFormat(undefined, { hour: '2-digit', minute: '2-digit', hour12: false });
+const tick = () => { clock.textContent = timeFormat.format(new Date()); };
+tick();
+setInterval(tick, 15000);
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// Copy email.
+const copyButton = document.querySelector('.copy');
+const copyLabel = copyButton.querySelector('.copy-label');
+const copyStatus = document.querySelector('.copy-status');
+let copyTimer;
+copyButton.addEventListener('click', async () => {
+    clearTimeout(copyTimer);
+    try {
+        await navigator.clipboard.writeText(copyButton.dataset.copy);
+        copyButton.classList.add('is-done');
+        copyLabel.textContent = 'Copied';
+        copyStatus.textContent = '';
+    } catch {
+        copyStatus.textContent = 'Copy blocked. Select the address above.';
     }
+    copyTimer = setTimeout(() => {
+        copyButton.classList.remove('is-done');
+        copyLabel.textContent = 'Copy email';
+        copyStatus.textContent = '';
+    }, 2200);
 });

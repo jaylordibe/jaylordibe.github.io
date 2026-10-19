@@ -2,3 +2,9 @@
 # except for .gitignore
 !.gitignore
 .idea/
+
+# Impeccable working files (captures, decision sketches)
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/*.html
+.impeccable/questions/

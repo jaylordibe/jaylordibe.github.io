@@ -3,571 +3,344 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jay Lord Ibe - Lead Software Engineer</title>
-    <meta name="description" content="Professional Lead Software Engineer specializing in modern web technologies and innovative solutions.">
+    <title>Jay Lord Ibe · Lead Software Engineer</title>
+    <meta name="description" content="Jay Lord Ibe is a Lead Software Engineer with 10+ years building enterprise systems end to end: Node.js (NestJS, Express) and Next.js today, with Java, PHP, React, Vue and Angular behind them, and the cloud pipelines that ship them.">
+    <meta name="theme-color" content="#f3f4f1">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jay Lord Ibe · Lead Software Engineer">
+    <meta property="og:description" content="10+ years building enterprise systems end to end, from banking microservices to e-commerce platforms.">
+    <meta property="og:url" content="https://jaylordibe.github.io/">
+    <meta name="twitter:card" content="summary">
+    <link rel="canonical" href="https://jaylordibe.github.io/">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preload" href="fonts/big-shoulders-display.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/barlow-condensed-600.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jay Lord Ibe",
+        "jobTitle": "Lead Software Engineer",
+        "url": "https://jaylordibe.github.io/",
+        "email": "mailto:jaylordibe@gmail.com",
+        "sameAs": [
+            "https://www.linkedin.com/in/jaylordibe",
+            "https://github.com/jaylordibe",
+            "https://twitter.com/jaylordibe"
+        ]
+    }
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span class="logo-text">Jay Lord Ibe</span>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+    <svg width="0" height="0" class="visually-hidden" aria-hidden="true">
+        <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="square"/></symbol>
+        <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V5m-7 6 7-7 7 7" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="square"/></symbol>
+        <symbol id="i-copy" viewBox="0 0 24 24"><path d="M8 8h12v12H8zM4 16V4h12" fill="none" stroke="currentColor" stroke-width="2.25"/></symbol>
+        <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+        <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+        <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 5h18v14H3zm0 0 9 8 9-8" fill="none" stroke="currentColor" stroke-width="2.25"/></symbol>
+    </svg>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="floating-shapes">
-                <div class="code-symbol symbol-1">{ }</div>
-                <div class="code-symbol symbol-2">&lt;/&gt;</div>
-                <div class="code-symbol symbol-3">( )</div>
-                <div class="code-symbol symbol-4">[ ]</div>
-                <div class="code-symbol symbol-5">;</div>
-                <div class="code-symbol symbol-6">=</div>
-                <div class="code-symbol symbol-7">+</div>
-                <div class="code-symbol symbol-8">*</div>
-            </div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span class="title-line">Hello, I'm</span>
-                    <span class="title-line highlight">Jay Lord Ibe</span>
-                    <span class="title-line">Lead Software Engineer</span>
-                </h1>
-                <p class="hero-description">
-                    Lead Software Engineer with 8+ years of experience architecting and delivering enterprise-grade solutions.
-                    Expert in full-stack development, cloud infrastructure, and DevOps practices across multiple platforms.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        <span>View My Work</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <span>Get In Touch</span>
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="code-window">
-                    <div class="window-header">
-                        <div class="window-controls">
-                            <span class="control close"></span>
-                            <span class="control minimize"></span>
-                            <span class="control maximize"></span>
-                        </div>
-                        <div class="window-title">jaylordibe.js</div>
-                    </div>
-                    <div class="window-content">
-                        <div class="code-line">
-                            <span class="line-number">1</span>
-                            <span class="code-text">
-                                <span class="keyword">const</span> 
-                                <span class="variable">developer</span> 
-                                <span class="operator">=</span> 
-                                <span class="string">'Jay Lord Ibe'</span><span class="semicolon">;</span>
-                            </span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">2</span>
-                            <span class="code-text">
-                                <span class="keyword">const</span> 
-                                <span class="variable">skills</span> 
-                                <span class="operator">=</span> 
-                                <span class="bracket">[</span>
-                            </span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">3</span>
-                            <span class="code-text">
-                                &nbsp;&nbsp;<span class="string">'Java'</span><span class="semicolon">,</span>
-                            </span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">4</span>
-                            <span class="code-text">
-                                &nbsp;&nbsp;<span class="string">'PHP'</span><span class="semicolon">,</span>
-                            </span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">5</span>
-                            <span class="code-text">
-                                &nbsp;&nbsp;<span class="string">'JavaScript'</span><span class="semicolon">,</span>
-                            </span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">6</span>
-                            <span class="code-text">
-                                &nbsp;&nbsp;<span class="string">'Python'</span><span class="semicolon">,</span>
-                            </span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">7</span>
-                            <span class="code-text">
-                                &nbsp;&nbsp;<span class="string">'Linux Server Administration'</span>
-                            </span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">8</span>
-                            <span class="code-text">
-                                <span class="bracket">]</span><span class="semicolon">;</span>
-                            </span>
-                        </div>
-                        <div class="code-line">
-                            <span class="line-number">9</span>
-                            <span class="code-text">
-                                <span class="keyword">console</span><span class="dot">.</span><span class="function">log</span><span class="bracket">(</span><span class="string">'Ready to build amazing things!'</span><span class="bracket">)</span><span class="semicolon">;</span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
+    <a class="skip-link" href="#work">Skip to work</a>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Passionate developer with a love for clean code and innovative solutions</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-description">
-                        I'm a Lead Software Engineer with over 8 years of experience in full-stack development.
-                        My expertise spans across multiple programming languages, frameworks, and cloud platforms, 
-                        enabling me to architect and deliver robust, scalable solutions for complex business challenges.
-                    </p>
-                    <p class="about-description">
-                        From backend systems using Java and Spring Boot to modern frontend applications with React and Vue.js, 
-                        I bring comprehensive technical knowledge and a passion for clean, maintainable code. My DevOps 
-                        experience ensures seamless deployment and infrastructure management across cloud platforms.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <div class="stat-number">8+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">100+</div>
-                            <div class="stat-label">Projects Completed</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">95%</div>
-                            <div class="stat-label">Client Satisfaction</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="profile-image">
-                        <img src="jay.jpeg" alt="Jay Lord Ibe - Lead Software Engineer" />
-                    </div>
-                </div>
-            </div>
+    <header class="sign" id="sign">
+        <div class="sign-inner">
+            <a class="mark" href="#top" aria-label="Jay Lord Ibe, back to top">JI</a>
+            <div class="flap-row flap-mini" data-flap="DEPARTURES" data-length="10" aria-hidden="true"><span class="flap-fallback">DEPARTURES</span></div>
+            <nav class="sign-nav" aria-label="Primary">
+                <a href="#work">Work</a>
+                <a href="#career">Career</a>
+                <a href="#network">Stack</a>
+                <a href="#profile">Profile</a>
+                <a class="sign-cta" href="#contact">Contact</a>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Technical Skills</h2>
-                <p class="section-subtitle">Technologies and tools I work with</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="category-title">Programming Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-java"></i>
-                            <span>Java</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-php"></i>
-                            <span>PHP</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js-square"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>C/C++</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-terminal"></i>
-                            <span>Bash</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Frameworks & Libraries</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-leaf"></i>
-                            <span>Spring Boot</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-play"></i>
-                            <span>Play Framework</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>Hibernate</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-laravel"></i>
-                            <span>Laravel</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-fire"></i>
-                            <span>CodeIgniter</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-server"></i>
-                            <span>Express.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-layer-group"></i>
-                            <span>NestJS</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-angular"></i>
-                            <span>Angular</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-react"></i>
-                            <span>React.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-vue"></i>
-                            <span>Vue.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js"></i>
-                            <span>Next.js</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="category-title">Databases</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>MySQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-search"></i>
-                            <span>Elasticsearch</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-memory"></i>
-                            <span>Redis</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-bolt"></i>
-                            <span>Memcache</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 class="category-title">DevOps & Cloud</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-linux"></i>
-                            <span>Linux Server</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-aws"></i>
-                            <span>AWS</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-google"></i>
-                            <span>Google Cloud</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-microsoft"></i>
-                            <span>Azure</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-docker"></i>
-                            <span>Docker</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-cogs"></i>
-                            <span>Jenkins</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code-branch"></i>
-                            <span>Infrastructure as Code</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub Actions</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-bitbucket"></i>
-                            <span>Bitbucket Pipelines</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-gitlab"></i>
-                            <span>GitLab CI/CD</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-rocket"></i>
-                            <span>Travis CI</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section class="hero" id="top" data-station="DEPARTURES">
+            <div class="wrap">
+                <h1 class="visually-hidden">Jay Lord Ibe, Lead Software Engineer</h1>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Some of my recent work and side projects</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=400&fit=crop" alt="E-Commerce Platform" />
+                <div class="board" aria-hidden="true">
+                    <div class="board-head">
+                        <span>Departures</span>
+                        <span class="board-clock">Local time <time id="clock">--:--</time></span>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">E-Commerce Platform</h3>
-                        <p class="project-description">
-                            A comprehensive e-commerce solution built with Laravel and Angular. 
-                            Features advanced API integrations with multiple Order Management Systems (OMS), AI-powered 
-                            recommendations, intelligent inventory management, real-time analytics, and comprehensive reporting.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Laravel</span>
-                            <span class="tech-tag">Angular</span>
-                            <span class="tech-tag">REST API</span>
-                            <span class="tech-tag">OMS Integration</span>
-                            <span class="tech-tag">Artificial Intelligence</span>
-                        </div>
-<!--                        <div class="project-links">-->
-<!--                            <a href="#" class="project-link">-->
-<!--                                <i class="fab fa-github"></i>-->
-<!--                                <span>Code</span>-->
-<!--                            </a>-->
-<!--                            <a href="#" class="project-link">-->
-<!--                                <i class="fas fa-external-link-alt"></i>-->
-<!--                                <span>Live Demo</span>-->
-<!--                            </a>-->
-<!--                        </div>-->
-                    </div>
+                    <div class="flap-row flap-xl board-wide" data-flap="JAY LORD IBE" data-length="12"><span class="flap-fallback">JAY LORD IBE</span></div>
+                    <div class="flap-row flap-md flap-yellow board-wide" data-flap="LEAD SOFTWARE ENGINEER" data-length="22"><span class="flap-fallback">LEAD SOFTWARE ENGINEER</span></div>
+                    <div class="flap-row flap-md board-wide" data-flap="FULL STACK · 10+ YEARS" data-length="22"><span class="flap-fallback">FULL STACK · 10+ YEARS</span></div>
+                    <div class="flap-row flap-narrow-xl board-narrow" data-flap="JAY LORD" data-length="8"><span class="flap-fallback">JAY LORD</span></div>
+                    <div class="flap-row flap-narrow-xl board-narrow" data-flap="IBE" data-length="8"><span class="flap-fallback">IBE</span></div>
+                    <div class="flap-row flap-narrow-md flap-yellow board-narrow" data-flap="LEAD SOFTWARE" data-length="13"><span class="flap-fallback">LEAD SOFTWARE</span></div>
+                    <div class="flap-row flap-narrow-md flap-yellow board-narrow" data-flap="ENGINEER" data-length="13"><span class="flap-fallback">ENGINEER</span></div>
+                    <div class="flap-row flap-narrow-md board-narrow" data-flap="10+ YEARS" data-length="13"><span class="flap-fallback">10+ YEARS</span></div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=400&fit=crop" alt="Health Tracker Application" />
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Health Tracker Application</h3>
-                        <p class="project-description">
-                            A multi-faceted health tracking application built with Spring Boot and React. 
-                            Features integration with multiple food nutrition APIs, health device synchronization, cloud data storage, 
-                            and AI-powered personalized food suggestions and exercise recommendations based on user data.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">REST API</span>
-                            <span class="tech-tag">Cloud Sync</span>
-                            <span class="tech-tag">Health APIs</span>
-                        </div>
-<!--                        <div class="project-links">-->
-<!--                            <a href="#" class="project-link">-->
-<!--                                <i class="fab fa-github"></i>-->
-<!--                                <span>Code</span>-->
-<!--                            </a>-->
-<!--                            <a href="#" class="project-link">-->
-<!--                                <i class="fas fa-external-link-alt"></i>-->
-<!--                                <span>Live Demo</span>-->
-<!--                            </a>-->
-<!--                        </div>-->
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800&h=400&fit=crop" alt="Bank API Modernization" />
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Bank API Modernization</h3>
-                        <p class="project-description">
-                            A fundamental bank API modernization project using Spring Boot microservices architecture. 
-                            Transformed legacy banking systems into scalable, distributed microservices with RESTful APIs,
-                            service discovery, API gateway, and secure authentication for enhanced performance and maintainability.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">Microservices</span>
-                            <span class="tech-tag">REST API</span>
-                            <span class="tech-tag">API Gateway</span>
-                            <span class="tech-tag">Service Discovery</span>
-                        </div>
-<!--                        <div class="project-links">-->
-<!--                            <a href="#" class="project-link">-->
-<!--                                <i class="fab fa-github"></i>-->
-<!--                                <span>Code</span>-->
-<!--                            </a>-->
-<!--                            <a href="#" class="project-link">-->
-<!--                                <i class="fas fa-external-link-alt"></i>-->
-<!--                                <span>Live Demo</span>-->
-<!--                            </a>-->
-<!--                        </div>-->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's work together to bring your ideas to life</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>jaylordibe@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>LinkedIn</h3>
-                            <p>linkedin.com/in/jaylordibe</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>GitHub</h3>
-                            <p>github.com/jaylordibe</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-twitter"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>Twitter</h3>
-                            <p>@jaylordibe</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-message">
-                    <h3>Ready to start your project?</h3>
-                    <p>
-                        I'm always excited to work on new projects and collaborate with amazing people. 
-                        Whether you have a specific project in mind or just want to chat about technology, 
-                        feel free to reach out!
-                    </p>
-                    <div class="contact-cta">
-                        <a href="mailto:jaylordibe@gmail.com" class="btn btn-primary">
-                            <span>Send Email</span>
-                            <i class="fas fa-paper-plane"></i>
+                <div class="hero-foot">
+                    <p class="lede">I design and ship enterprise systems end to end: Node.js services on NestJS and Express with Next.js on the front, built on years of Java, PHP, React, Vue and Angular, and the cloud pipelines that deploy them.</p>
+                    <div class="hero-actions">
+                        <a class="boarding-strip" href="#contact">
+                            <span class="boarding-strip-label">Now boarding</span>
+                            <span class="boarding-strip-dest">Lead roles &amp; contract work</span>
+                            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
                         </a>
+                        <div class="hero-links">
+                            <a href="https://www.linkedin.com/in/jaylordibe" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>LinkedIn</a>
+                            <a href="https://github.com/jaylordibe" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2024 Jay Lord Ibe. All rights reserved.</p>
+        <section class="departures" id="work" data-station="WORK" aria-labelledby="work-title">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2 id="work-title">Selected work</h2>
+                    <p>Three systems, each drawn as the route a request travels through it.</p>
                 </div>
-                <div class="footer-social">
-                    <a href="#" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+
+                <div class="dep-labels" aria-hidden="true">
+                    <span>Code</span><span>Destination</span><span>Via</span><span>Sector</span>
+                </div>
+
+                <article class="dep" style="--line: var(--line-blue)">
+                    <div class="flap-row flap-sm dep-code" data-flap="BNK" data-length="3" aria-hidden="true"><span class="flap-fallback">BNK</span></div>
+                    <div class="dep-main">
+                        <h3>Bank API Modernization</h3>
+                        <p>Moved legacy banking systems onto Spring Boot microservices: RESTful APIs behind an API gateway, service discovery, and secure authentication, for systems that scale and stay maintainable.</p>
+                    </div>
+                    <p class="dep-via"><span class="visually-hidden">Built with </span>Spring Boot&nbsp;· Microservices&nbsp;· REST</p>
+                    <div class="dep-sector">
+                        <span class="visually-hidden">Sector: Banking</span>
+                        <div class="flap-row flap-sm" data-flap="BANKING" data-length="7" aria-hidden="true"><span class="flap-fallback">BANKING</span></div>
+                    </div>
+                    <ol class="route" data-draw aria-label="Architecture route">
+                        <li style="--i:0">Client apps</li>
+                        <li style="--i:1">API gateway</li>
+                        <li style="--i:2">Secure auth</li>
+                        <li style="--i:3">Service discovery</li>
+                        <li style="--i:4">Spring Boot microservices</li>
+                        <li style="--i:5">Legacy core systems</li>
+                    </ol>
+                </article>
+
+                <article class="dep" style="--line: var(--line-red)">
+                    <div class="flap-row flap-sm dep-code" data-flap="ECM" data-length="3" aria-hidden="true"><span class="flap-fallback">ECM</span></div>
+                    <div class="dep-main">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full commerce platform on Laravel and Angular, wired into multiple Order Management Systems, with AI-powered recommendations, inventory management, real-time analytics and reporting.</p>
+                    </div>
+                    <p class="dep-via"><span class="visually-hidden">Built with </span>Laravel&nbsp;· Angular&nbsp;· OMS&nbsp;· AI</p>
+                    <div class="dep-sector">
+                        <span class="visually-hidden">Sector: Retail</span>
+                        <div class="flap-row flap-sm" data-flap="RETAIL" data-length="7" aria-hidden="true"><span class="flap-fallback">RETAIL</span></div>
+                    </div>
+                    <ol class="route" data-draw aria-label="Architecture route">
+                        <li style="--i:0">Angular storefront</li>
+                        <li style="--i:1">Laravel API</li>
+                        <li style="--i:2">AI recommendations</li>
+                        <li style="--i:3">Inventory</li>
+                        <li style="--i:4">OMS integrations</li>
+                        <li style="--i:5">Analytics &amp; reporting</li>
+                    </ol>
+                </article>
+
+                <article class="dep" style="--line: var(--line-green)">
+                    <div class="flap-row flap-sm dep-code" data-flap="HLT" data-length="3" aria-hidden="true"><span class="flap-fallback">HLT</span></div>
+                    <div class="dep-main">
+                        <h3>Health Tracker</h3>
+                        <p>A health tracking application on Spring Boot and React that pulls from food nutrition APIs, syncs health devices, stores data in the cloud, and suggests food and exercise with AI.</p>
+                    </div>
+                    <p class="dep-via"><span class="visually-hidden">Built with </span>Spring Boot&nbsp;· React&nbsp;· Cloud</p>
+                    <div class="dep-sector">
+                        <span class="visually-hidden">Sector: Health</span>
+                        <div class="flap-row flap-sm" data-flap="HEALTH" data-length="7" aria-hidden="true"><span class="flap-fallback">HEALTH</span></div>
+                    </div>
+                    <ol class="route" data-draw aria-label="Architecture route">
+                        <li style="--i:0">React app</li>
+                        <li style="--i:1">Spring Boot API</li>
+                        <li style="--i:2">Nutrition APIs</li>
+                        <li style="--i:3">Device sync</li>
+                        <li style="--i:4">Cloud storage</li>
+                        <li style="--i:5">AI suggestions</li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+
+        <section class="timetable" id="career" data-station="CAREER" aria-labelledby="career-title">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2 id="career-title">Timetable</h2>
+                    <p>Ten years across seven companies, working with teams in the Philippines, Malaysia and the United States.</p>
+                </div>
+
+                <div class="tt-labels" aria-hidden="true"><span>Years</span><span>Destination</span><span>Operator</span><span>Service</span></div>
+                <ol class="stations">
+                    <li class="station is-now">
+                        <span class="visually-hidden">2025 to now</span>
+                        <div class="flap-row flap-sm station-years" data-flap="2025-NOW" data-length="8" aria-hidden="true"><span class="flap-fallback">2025-NOW</span></div>
+                        <h3>Lead Software Engineer</h3>
+                        <p class="station-co">IBM · Philippines</p>
+                        <p class="station-note">Full-stack product work on Node.js: NestJS and Express services behind Next.js frontends.</p>
+                    </li>
+                    <li class="station">
+                        <span class="visually-hidden">2021 to 2025</span>
+                        <div class="flap-row flap-sm station-years" data-flap="2021-25" data-length="8" aria-hidden="true"><span class="flap-fallback">2021-25</span></div>
+                        <h3>Application Developer</h3>
+                        <p class="station-co">IBM · Philippines</p>
+                        <p class="station-note">Built custom components for enterprise information systems, taking IT requirements all the way to production software that performs.</p>
+                    </li>
+                    <li class="station">
+                        <span class="visually-hidden">2020</span>
+                        <div class="flap-row flap-sm station-years" data-flap="2020" data-length="8" aria-hidden="true"><span class="flap-fallback">2020</span></div>
+                        <h3>Senior PHP Developer</h3>
+                        <p class="station-co">T22 Media · United States</p>
+                        <p class="station-note">Built, tested and kept running the Laravel APIs behind a US media company's products.</p>
+                    </li>
+                    <li class="station">
+                        <span class="visually-hidden">2019 to 2020</span>
+                        <div class="flap-row flap-sm station-years" data-flap="2019-20" data-length="8" aria-hidden="true"><span class="flap-fallback">2019-20</span></div>
+                        <h3>Chief Technology Officer</h3>
+                        <p class="station-co">Athedian, Inc. · Philippines</p>
+                        <p class="station-note">Set the technical direction. Mapped every unit's business processes to application requirements, and led the company through complex deployments.</p>
+                    </li>
+                    <li class="station">
+                        <span class="visually-hidden">2018 to 2021</span>
+                        <div class="flap-row flap-sm station-years" data-flap="2018-21" data-length="8" aria-hidden="true"><span class="flap-fallback">2018-21</span></div>
+                        <h3>Senior PHP Developer</h3>
+                        <p class="station-co">Cloud Sea Media Group · Malaysia</p>
+                        <p class="station-note">Architected several software products and led their development, while mentoring the junior developers who built them with me.</p>
+                    </li>
+                    <li class="station">
+                        <span class="visually-hidden">2018 to 2019</span>
+                        <div class="flap-row flap-sm station-years" data-flap="2018-19" data-length="8" aria-hidden="true"><span class="flap-fallback">2018-19</span></div>
+                        <h3>DevOps Engineer</h3>
+                        <p class="station-co">AppTech Gateway International · United States</p>
+                        <p class="station-note">Kept AWS production infrastructure (EC2, S3, RDS) healthy and lean through backups, patching and scaling.</p>
+                    </li>
+                    <li class="station">
+                        <span class="visually-hidden">2016 to 2018</span>
+                        <div class="flap-row flap-sm station-years" data-flap="2016-18" data-length="8" aria-hidden="true"><span class="flap-fallback">2016-18</span></div>
+                        <h3>Java Developer</h3>
+                        <p class="station-co">Binnovate Digital Media · Philippines</p>
+                        <p class="station-note">Built Java and Spring Boot APIs across the whole lifecycle: architecture, integration testing, deployment and monitoring.</p>
+                    </li>
+                    <li class="station">
+                        <span class="visually-hidden">2015 to 2016</span>
+                        <div class="flap-row flap-sm station-years" data-flap="2015-16" data-length="8" aria-hidden="true"><span class="flap-fallback">2015-16</span></div>
+                        <h3>Associate Java Developer</h3>
+                        <p class="station-co">Mangium Software Development Services · Philippines</p>
+                        <p class="station-note">Where the line starts: shipping Java fixes and enhancements into production releases.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="network" id="network" data-station="STACK" aria-labelledby="network-title">
+            <div class="wrap">
+                <div class="section-head">
+                    <h2 id="network-title">The network</h2>
+                    <p>Five lines, one stack. I work at every stop, from the language runtime to the deploy pipeline.</p>
+                </div>
+
+                <div class="lines">
+                    <div class="line" style="--c: var(--l-yellow)" data-draw>
+                        <h3 class="line-name"><span class="bullet" aria-hidden="true">L</span>Languages</h3>
+                        <ul class="stops">
+                            <li class="is-now" style="--i:0">Node.js<span class="now-tag"><span class="visually-hidden">, </span>now</span></li><li style="--i:1">JavaScript</li><li style="--i:2">Java</li><li style="--i:3">PHP</li><li style="--i:4">Python</li><li style="--i:5">C/C++</li><li style="--i:6">Bash</li>
+                        </ul>
+                    </div>
+                    <div class="line" style="--c: var(--l-white)" data-draw>
+                        <h3 class="line-name"><span class="bullet" aria-hidden="true">B</span>Backend</h3>
+                        <ul class="stops">
+                            <li class="is-now" style="--i:0">NestJS<span class="now-tag"><span class="visually-hidden">, </span>now</span></li><li class="is-now" style="--i:1">Express.js<span class="now-tag"><span class="visually-hidden">, </span>now</span></li><li style="--i:2">Spring Boot</li><li style="--i:3">Play Framework</li><li style="--i:4">Hibernate</li><li style="--i:5">Laravel</li><li style="--i:6">CodeIgniter</li>
+                        </ul>
+                    </div>
+                    <div class="line" style="--c: var(--l-sky)" data-draw>
+                        <h3 class="line-name"><span class="bullet" aria-hidden="true">F</span>Frontend</h3>
+                        <ul class="stops">
+                            <li class="is-now" style="--i:0">Next.js<span class="now-tag"><span class="visually-hidden">, </span>now</span></li><li style="--i:1">React</li><li style="--i:2">Vue.js</li><li style="--i:3">Angular</li>
+                        </ul>
+                    </div>
+                    <div class="line" style="--c: var(--l-green)" data-draw>
+                        <h3 class="line-name"><span class="bullet" aria-hidden="true">D</span>Data</h3>
+                        <ul class="stops">
+                            <li style="--i:0">MySQL</li><li style="--i:1">PostgreSQL</li><li style="--i:2">MongoDB</li><li style="--i:3">Elasticsearch</li><li style="--i:4">Redis</li><li style="--i:5">Memcache</li>
+                        </ul>
+                    </div>
+                    <div class="line" style="--c: var(--l-coral)" data-draw>
+                        <h3 class="line-name"><span class="bullet" aria-hidden="true">C</span>Cloud &amp; DevOps</h3>
+                        <ul class="stops">
+                            <li style="--i:0">Linux servers</li><li style="--i:1">AWS</li><li style="--i:2">Google Cloud</li><li style="--i:3">Azure</li><li style="--i:4">Docker</li><li style="--i:5">Jenkins</li><li style="--i:6">Infrastructure as Code</li><li style="--i:7">GitHub Actions</li><li style="--i:8">Bitbucket Pipelines</li><li style="--i:9">GitLab CI/CD</li><li style="--i:10">Travis CI</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <section class="profile" id="profile" data-station="PROFILE" aria-labelledby="profile-title">
+            <div class="wrap profile-grid">
+                <figure class="portrait" data-draw>
+                    <img src="jay-portrait.webp" width="760" height="980" alt="Jay Lord Ibe, seated, smiling at the camera" decoding="async">
+                    <figcaption><strong>Jay Lord Ibe</strong> Lead Software Engineer</figcaption>
+                </figure>
+                <div class="profile-copy">
+                    <h2 id="profile-title">Ten years across every layer of the stack.</h2>
+                    <p>I'm a Lead Software Engineer with more than ten years in full-stack development. I architect and deliver systems that hold up under real business load, across multiple languages, frameworks and cloud platforms.</p>
+                    <p>These days at IBM that means Node.js services on NestJS and Express with Next.js on the front, backed by years of Java, Spring Boot, React and Vue.js, plus the DevOps work that gets them deployed and keeps them running. I care about code the next engineer can read.</p>
+                    <dl class="service-info">
+                        <div><dt>Role</dt><dd>Lead Software Engineer</dd></div>
+                        <div><dt>Experience</dt><dd>10+ years, full stack</dd></div>
+                        <div><dt>Covers</dt><dd>Backend · Frontend · Data · Cloud &amp; DevOps</dd></div>
+                        <div><dt>Based</dt><dd>Philippines, working remotely with teams abroad</dd></div>
+                        <div><dt>Education</dt><dd>B.S. Information Technology, University of Science and Technology of Southern Philippines</dd></div>
+                        <div><dt>Training</dt><dd>CCNA · Cybersecurity and data privacy (GDPR, CCPA)</dd></div>
+                        <div><dt>Community</dt><dd>Mozilla Philippines and DevCon Philippines volunteer · Google Developer Groups Philippines</dd></div>
+                        <div><dt>Open to</dt><dd>Lead roles and contract work</dd></div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <section class="boarding" id="contact" data-station="BOARDING" aria-labelledby="contact-title">
+            <div class="wrap">
+                <h2 id="contact-title">Now boarding.</h2>
+                <p class="boarding-lede">Hiring for a lead role, or need a system built end to end? Write to me directly.</p>
+
+                <div class="email-row">
+                    <a class="email" href="mailto:jaylordibe@gmail.com">jaylordibe@gmail.com</a>
+                    <button class="copy" type="button" data-copy="jaylordibe@gmail.com">
+                        <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>
+                        <span class="copy-label">Copy email</span>
+                    </button>
+                    <span class="copy-status" role="status" aria-live="polite"></span>
+                </div>
+
+                <ul class="tickets">
+                    <li><a href="https://www.linkedin.com/in/jaylordibe" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg><span class="ticket-name">LinkedIn</span><span class="ticket-handle">in/jaylordibe</span><svg class="icon ticket-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+                    <li><a href="https://github.com/jaylordibe" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg><span class="ticket-name">GitHub</span><span class="ticket-handle">jaylordibe</span><svg class="icon ticket-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+                    <li><a href="https://twitter.com/jaylordibe" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg><span class="ticket-name">X</span><span class="ticket-handle">@jaylordibe</span><svg class="icon ticket-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+                    <li><a href="mailto:jaylordibe@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span class="ticket-name">Email</span><span class="ticket-handle">jaylordibe@gmail.com</span><svg class="icon ticket-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <div class="wrap foot-inner">
+            <span>&copy; <span id="year">2026</span> Jay Lord Ibe</span>
+            <span>Hand-built. No framework, no template.</span>
+            <a href="#top">Back to top <svg class="icon" aria-hidden="true"><use href="#i-up"/></svg></a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
